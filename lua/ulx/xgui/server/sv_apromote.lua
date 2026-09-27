@@ -11,8 +11,6 @@
 --[[ TODO: Fix cfc_time so that we can enable this line
 if ULib==nil or GetConVarString("utime_welcome")== "" then print("WARNING: Missing dependancy UTime/ULX/ULib APromote is now inactive.") return end
 ]]
-util.AddNetworkString( "APromoteShinys" )
-
 resource.AddFile("materials/gui/silkicons/cog.vmt")
 resource.AddFile("materials/gui/silkicons/cog.vtf")
 ULib.ucl.registerAccess( "apromote_settings", "superadmin", "Allows managing all settings related to APromote.", "XGUI" )
