@@ -64,8 +64,7 @@ local function doApUpdate()
 		end
 end
 
-local function doApShinys( um )
-	local ply = um:ReadEntity()
+local function doApShinys( ply )
     if not IsValid( ply ) then return end
 
 	local em = ParticleEmitter(ply:GetPos())
