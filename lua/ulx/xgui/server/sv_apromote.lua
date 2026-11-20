@@ -142,10 +142,10 @@ local Hours = 0
 end
 
 timer.Create("doAPUpdateTimer",10,0, function()
-if( GetConVarNumber( "ap_enabled" ) ~= 1) then return end
-	for k, v in pairs(player.GetAll()) do
-		if (v:IsPlayer() and v:IsValid() and not v:IsBot()) then
-			ULib.queueFunctionCall(	checkPlayer, v)
+	if GetConVarNumber( "ap_enabled" ) ~= 1 then return end
+	for _, ply in player.Iterator() do
+		if not ply:IsBot() then
+			checkPlayer( ply )
 		end
 	end
 end)
